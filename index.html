@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="layout">
+        <header>
+            <h1>Encriptador de texto</h1>
+        </header>
+        <main>
+            <section class="container">
+                <div class="sub-container">
+                    <input type="text" id="text-input" placeholder="Escribe el texto aquí" oninput="validateInput()">
+                    <p class="error-message" id="lowercase-message">Solamente letras minúsculas.</p>
+                    <p class="error-message" id="number-message">No se aceptan números.</p>
+                    <div class="container-button">
+                        <button id="encrypt-button" onclick="captureInput()" disabled>Encriptar</button>
+                        <button id="refresh-button" onclick="refreshPage()" style="display: none;">
+                            <img src="/assets/refresh_17814.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="sub-container">
+                    <p id="encrypted-text" class="decrypted-output"></p>
+                    <div class="container-button">
+                        <button id="desencrypt-button" onclick="desencrypt()" disabled>Desencriptar</button>
+                        <button id="copy-button" onclick="copy()" style="display: none;">
+                            <img src="/assets/file_copy_14804.png" alt="">
+                        </button>
+                    </div>
+                    <div id="alert-copy"></div>
+                </div>
+            </section>
+        </main>
+        <footer>
+    
+        </footer>
+
+    </section>
+
+
+    <!-- Enlace al archivo JavaScript externo -->
+    <script src="encryptor.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+</body>
+</html>
